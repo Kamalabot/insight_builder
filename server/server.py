@@ -3,10 +3,10 @@
 from fastapi import FastAPI, status, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
-from .table_models import Base
-from .database_orm import get_db, engine
+from table_models import Base
+from database_orm import get_db, engine
 #bring in the response, request object schema
-from . import users, bikers
+import users, bikers
 
 Base.metadata.create_all(bind=engine)
 

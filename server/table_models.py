@@ -1,6 +1,6 @@
 """The module provides the schema for the database tables"""
 from sqlalchemy import Column, Integer, Float, String
-from .database_orm import Base
+from database_orm import Base
 from sqlalchemy.sql.expression import text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
 

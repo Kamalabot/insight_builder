@@ -1,9 +1,9 @@
 """This file contains the get endpoints """
 from fastapi import Depends, FastAPI, Response, status, HTTPException, APIRouter
-from .schema import biker_row,delivery_dimensions, pickup_dimensions, features_ds, prediction_fm
-from .table_models import Base,Bikers, deliverydimensions, pickupdimensions, featuresds, predictionfm 
+from schema import biker_row,delivery_dimensions, pickup_dimensions, features_ds, prediction_fm
+from table_models import Base,Bikers, deliverydimensions, pickupdimensions, featuresds, predictionfm 
 from typing import List
-from .database_orm import get_db
+from database_orm import get_db
 from sqlalchemy.orm import Session
 
 router = APIRouter(

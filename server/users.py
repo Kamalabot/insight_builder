@@ -1,13 +1,12 @@
 """This file contains the users and login end point"""
 
 from fastapi import Depends, FastAPI, Response, status, HTTPException, APIRouter
-from . import table_models
-from .schema import res_user, create_user
+from schema import res_user, create_user
 from typing import List
-from .oauth import get_current_user, verify_access_token, create_access_token
-from .table_models import Base, User
-from .utils import hasher, verify_pass
-from .database_orm import get_db
+from oauth import get_current_user, verify_access_token, create_access_token
+from table_models import Base, User
+from utils import hasher, verify_pass
+from database_orm import get_db
 from sqlalchemy.orm import Session
 from fastapi.security.oauth2 import OAuth2PasswordRequestForm
 

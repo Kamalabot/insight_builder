@@ -1,7 +1,7 @@
 from jose import JWTError, jwt
-from .database_orm import get_db
-from . import table_models
-from .schema import TokenData
+from database_orm import get_db
+import table_models
+from schema import TokenData
 from sqlalchemy.orm import Session
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
